@@ -46,7 +46,7 @@ function DropdownMenu({ label, items, isOpen, setIsOpen }: DropdownProps) {
     return (
         <div className="relative" ref={dropdownRef}>
             <button
-                className="flex items-center gap-1 text-primary hover:text-primary/80 font-[raleway]"
+                className="flex items-center gap-1 text-primary hover:text-primary/80 font-[raleway] hover:cursor-pointer"
                 onClick={() => setIsOpen(!isOpen)}
             >
                 {label} <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
@@ -106,14 +106,14 @@ export default function NavBar() {
                     setIsOpen={setResourcesOpen}
                 />
 
-                <Link href="/pricing" className="text-primary hover:text-primary/80 font-[raleway]">
+                <Link href="/pricing" className="text-primary hover:text-primary/80 font-[raleway] hover:cursor-pointer">
                     Pricing
                 </Link>
-                <Link href="/contact" className="text-primary hover:text-primary/80 font-[raleway]">
+                <Link href="/contact" className="text-primary hover:text-primary/80 font-[raleway] hover:cursor-pointer">
                     Contact
                 </Link>
                 
-                <button className="bg-primary text-tertiary px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors font-[raleway]">
+                <button className="bg-primary text-tertiary px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors font-[raleway] hover:cursor-pointer">
                     Get Started
                 </button>
             </div>
