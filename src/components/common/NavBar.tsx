@@ -66,7 +66,7 @@ function DropdownMenu({ label, items, isOpen, setIsOpen }: DropdownProps) {
                     className={`
                         ${isMobile ? 'relative' : 'absolute'} 
                         top-full left-0 mt-1 w-48 
-                        bg-surface rounded-lg shadow-lg py-2 
+                        bg-background rounded-lg shadow-lg py-2 
                         border border-secondary z-[60]
                     `}
                     onClick={(e) => e.stopPropagation()}
@@ -121,7 +121,7 @@ export default function NavBar() {
                     />
                     <div className='flex flex-col ml-3'>
                         <h1 className="text-2xl lg:text-3xl font-bold font-[raleway] text-primary">ZentriLink</h1>
-                        <p className='text-base lg:text-lg font-[raleway] text-tertiary'>Centralization Software</p>
+                        <p className='text-base lg:text-lg font-[raleway] text-secondary'>Centralization Software</p>
                     </div>
                 </div>
 
@@ -135,7 +135,7 @@ export default function NavBar() {
 
                 <div className={`
                     fixed lg:static top-0 right-0 h-full w-64 lg:w-auto
-                    lg:flex items-center gap-8 bg-surface lg:bg-transparent
+                    lg:flex items-center gap-8 bg-foreground lg:bg-transparent
                     transform transition-transform duration-300 ease-in-out
                     ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'}
                     lg:flex-row flex-col justify-start lg:justify-end
@@ -174,7 +174,7 @@ export default function NavBar() {
                             Contact
                         </Link>
 
-                        <button className="bg-tertiary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors font-[raleway] hover:cursor-pointer w-full lg:w-auto">
+                        <button className="bg-foreground text-tertiary px-4 py-2 rounded-lg hover:bg-foreground/90 transition-colors font-[raleway] hover:cursor-pointer w-full lg:w-auto">
                             Get Started
                         </button>
                     </div>
