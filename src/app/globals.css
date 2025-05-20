@@ -3,6 +3,7 @@
 :root {
     --background: #e9e9e9;
     --foreground: #1d1d1d;
+    --hover: #f2f2f2;
     
     --primary: #111111;
     --secondary: #969696;
@@ -13,24 +14,26 @@
 }
 
 .dark {
-    --background: #0b0c0d;
+    --background: #0f0f0f;
     --foreground: #3a3a3a;
+    --hover: #1d1d1d;
 
     --primary: #dbdbdb;
     --secondary: #9b9b9b;
     --tertiary: #e4e4e4;
 
-    --green: #4a7459;
-    --light-green: #8b9e6d;
+    --green: #63a179;
+    --light-green: #97af74;
 }
 
 .dark .image-brightness {
-    filter: brightness(0.8) contrast(0.9);
+    filter: brightness(0.8) contrast(0.9) saturate(1.2);
 }
 
 @theme {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
+    --color-hover: var(--hover);
 
     --color-primary: var(--primary);
     --color-secondary: var(--secondary);
