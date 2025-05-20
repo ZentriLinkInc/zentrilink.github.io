@@ -76,18 +76,18 @@ export default function NavBar() {
     const [resourcesOpen, setResourcesOpen] = useState(false);
 
     return (
-        <nav className="flex w-full px-15 py-4 bg-surface justify-between items-center">
+        <nav className="flex w-full px-15 py-4 justify-between items-center">
             <div className="flex items-end">
                 <Image
                     src="/zentrilink-logo.png"
                     alt="ZentriLink Logo"
                     width={200}
                     height={200}
-                    className="h-22 w-auto"
+                    className="h-22 w-auto image-brightness transition-all"
                 />
                 <div className='flex flex-col ml-3'>
                     <h1 className="text-3xl font-bold font-[raleway] text-primary">ZentriLink</h1>
-                    <p className='text-lg font-[raleway] text-secondary'>Centralization Software</p>
+                    <p className='text-lg font-[raleway] text-tertiary'>Centralization Software</p>
                 </div>
             </div>
 
@@ -113,7 +113,7 @@ export default function NavBar() {
                     Contact
                 </Link>
 
-                <button className="bg-primary text-tertiary px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors font-[raleway] hover:cursor-pointer">
+                <button className="bg-tertiary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors font-[raleway] hover:cursor-pointer">
                     Get Started
                 </button>
             </div>
