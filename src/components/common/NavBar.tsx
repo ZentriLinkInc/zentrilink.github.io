@@ -53,14 +53,14 @@ function DropdownMenu({ label, items, isOpen, setIsOpen }: DropdownProps) {
             </button>
             {isOpen && (
                 <div
-                    className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg py-2 border border-gray-100"
+                    className="absolute top-full left-0 mt-1 w-48 bg-surface rounded-lg shadow-lg py-2 border border-secondary"
                     onClick={(e) => e.stopPropagation()}
                 >
                     {items.map((item) => (
                         <Link
                             key={item.href}
                             href={item.href}
-                            className="block px-4 py-2 hover:bg-gray-100 text-secondary"
+                            className="block px-4 py-2 hover:bg-secondary text-primary"
                         >
                             {item.label}
                         </Link>
