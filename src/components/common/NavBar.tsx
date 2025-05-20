@@ -125,7 +125,7 @@ export default function NavBar() {
                     </div>
                 </div>
 
-                <button 
+                <button
                     className="lg:hidden text-primary p-2"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     aria-label="Toggle mobile menu"
@@ -135,7 +135,7 @@ export default function NavBar() {
 
                 <div className={`
                     fixed lg:static top-0 right-0 h-full w-64 lg:w-auto
-                    lg:flex items-center gap-8 bg-foreground lg:bg-transparent
+                    lg:flex items-center gap-8 bg-background lg:bg-transparent
                     transform transition-transform duration-300 ease-in-out
                     ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'}
                     lg:flex-row flex-col justify-start lg:justify-end
@@ -143,8 +143,7 @@ export default function NavBar() {
                     shadow-lg lg:shadow-none
                     z-[55]
                 `}>
-                    {/* Close button for mobile menu */}
-                    <button 
+                    <button
                         className="lg:hidden absolute top-4 right-4 text-primary"
                         onClick={() => setIsMobileMenuOpen(false)}
                         aria-label="Close mobile menu"
