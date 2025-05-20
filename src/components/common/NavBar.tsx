@@ -31,6 +31,16 @@ const resources: NavItem[] = [
 
 function DropdownMenu({ label, items, isOpen, setIsOpen }: DropdownProps) {
     const dropdownRef = useRef<HTMLDivElement>(null);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        function handleResize() {
+            setIsMobile(window.innerWidth < 1024);
+        }
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
@@ -38,7 +48,6 @@ function DropdownMenu({ label, items, isOpen, setIsOpen }: DropdownProps) {
                 setIsOpen(false);
             }
         }
-
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, [setIsOpen]);
@@ -54,7 +63,12 @@ function DropdownMenu({ label, items, isOpen, setIsOpen }: DropdownProps) {
             </button>
             {isOpen && (
                 <div
-                    className="absolute top-full left-0 mt-1 w-48 bg-surface rounded-lg shadow-lg py-2 border border-secondary"
+                    className={`
+                        ${isMobile ? 'relative' : 'absolute'} 
+                        top-full left-0 mt-1 w-48 
+                        bg-surface rounded-lg shadow-lg py-2 
+                        border border-secondary z-[60]
+                    `}
                     onClick={(e) => e.stopPropagation()}
                 >
                     {items.map((item) => (
@@ -127,7 +141,7 @@ export default function NavBar() {
                     lg:flex-row flex-col justify-start lg:justify-end
                     pt-16 lg:pt-0 px-4 lg:px-0
                     shadow-lg lg:shadow-none
-                    z-50
+                    z-[55]
                 `}>
                     {/* Close button for mobile menu */}
                     <button 
