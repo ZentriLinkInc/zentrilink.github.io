@@ -25,8 +25,8 @@ const products: NavItem[] = [
 
 const resources: NavItem[] = [
     { label: 'Documentation', href: '/resources/documentation' },
-    { label: 'Blog', href: '/resources/blog' },
     { label: 'Support', href: '/resources/support' },
+    { label: 'Blog', href: '/resources/blog' },
 ];
 
 function DropdownMenu({ label, items, isOpen, setIsOpen }: DropdownProps) {

@@ -6,7 +6,9 @@ interface BannerProps {
 export default function Banner({ backgroundImage, opacity = 90 }: BannerProps) {
     return (
         <div
-            className={`flex flex-col p-6 sm:p-10 lg:p-20 py-16 sm:py-24 lg:py-32 rounded-2xl mt-4 sm:mt-8 mx-4 sm:mx-10 w-[92%] sm:w-[95%] items-center relative bg-cover bg-center overflow-hidden`}
+            className={`flex flex-col p-6 sm:p-10 lg:p-20 py-16 sm:py-24 lg:py-32 
+                rounded-2xl mt-4 sm:mt-8 mx-8 sm:mx-10 w-[92%] sm:w-[95%] items-center 
+                relative bg-cover bg-center overflow-hidden`}
             style={{
                 backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none'
             }}
