@@ -121,7 +121,7 @@ export default function NavBar() {
                     />
                     <div className='flex flex-col ml-3'>
                         <h1 className="text-2xl lg:text-3xl font-bold font-[raleway] text-primary">ZentriLink</h1>
-                        <p className='text-base lg:text-lg font-[raleway] text-secondary'>Centralization Software</p>
+                        <p className='text-base font-[raleway] text-secondary'>Empowering Enterprise Communication</p>
                     </div>
                 </div>
 
